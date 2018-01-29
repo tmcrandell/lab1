@@ -13,8 +13,8 @@ while(True):
     l=s.readline()
     colors= l.rstrip().split(",")
     rgb= [int(val) for val in colors]
-    
-    DISPLAYSURF.fill(rgb)
+    COLOR = pygame.Color(rgb[0], rgb[1], rgb[2])
+    DISPLAYSURF.fill(COLOR)
 
     for event in pygame.event.get():
       if event.type == QUIT:
